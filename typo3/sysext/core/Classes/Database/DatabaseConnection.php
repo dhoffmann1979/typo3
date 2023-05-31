@@ -1316,7 +1316,7 @@ class DatabaseConnection
 
         if ($connected) {
             $this->isConnected = true;
-
+            $this->connectionCharset = 'utf8mb4';
             if ($this->link->set_charset($this->connectionCharset) === false) {
                 GeneralUtility::sysLog(
                     'Error setting connection charset to "' . $this->connectionCharset . '"',
